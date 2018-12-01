@@ -1,0 +1,28 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+
+{{#each products}}
+<div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+        <div class="img_wrap">
+            <img src="{{this.image}}" alt="{{this.product_name}}">
+        </div>
+
+
+        <div class="caption">
+            <h4>{{this.product_name}}</h4>
+            <div class="clearfix">
+                <div class="price pull-left">
+                    <strong>$ {{this.price}}</strong>
+                </div>
+                <a href="/add-to-cart/{{this._id}}" class="btn btn-success pull-right" role="button">Add to cart</a>
+            </div>
+            <h4></h4>
+            {{!-- <p>{{this.product_s_desc}}</p> --}}
+
+        </div>
+    </div>
+</div>
+{{/each}}
+</div>

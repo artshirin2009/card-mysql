@@ -1,0 +1,12 @@
+.thumbnail {
+    min-height: 410px;
+}
+
+.img_wrap {
+    min-height: 280px;
+    text-align: center
+}
+
+.img_wrap img {
+    max-width: 100%;
+}

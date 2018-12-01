@@ -1,0 +1,9 @@
+<div class="row">
+    <h3>Authorized Users</h3>
+    <ul>
+        {{#each users}}
+        <li>Id - {{this.id}} Email - {{this.email}} , Password - {{this.password}} , Admin - {{this.role}}</li>
+        {{/each}}
+
+    </ul>
+</div>

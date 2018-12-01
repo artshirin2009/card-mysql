@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-sm-12 col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Orders of client {{user.email}}</div>
+            {{#each orders}}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th width="5%">#</th>
+                        <th width="">Product name</th>
+                        <th width="15%">Quantity</th>
+                        <th width="15%">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each this.cart.items}}
+                    <tr>
+                        <th width="5%" scope="row">1</th>
+                        <td width="">{{this.item.title}}</td>
+                        <td width="15%">{{this.qty}}</td>
+                        <td width="15%">{{this.price}}</td>
+                    </tr>
+                    {{/each}}
+                    <tr>
+                        <th width="5%" scope="row"></th>
+                        <th width=""></th>
+                        <th width="15%">Total Price</th>
+                        <td width="15%">{{this.cart.totalPrice}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            {{/each}}
+        </div>
+    </div>
+</div>
