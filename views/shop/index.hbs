@@ -1,6 +1,4 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
-
+{{#if title}}<h1>{{title}}</h1>{{/if}}
 
 {{#each products}}
 <div class="col-sm-6 col-md-4">
@@ -8,17 +6,16 @@
         <div class="img_wrap">
             <img src="{{this.image}}" alt="{{this.product_name}}">
         </div>
-
-
         <div class="caption">
             <h4>{{this.product_name}}</h4>
             <div class="clearfix">
-                <div class="price pull-left">
+                <div class="price">
                     <strong>$ {{this.price}}</strong>
                 </div>
-                <a href="/add-to-cart/{{this._id}}" class="btn btn-success pull-right" role="button">Add to cart</a>
+                <a href="/details/{{this.product_id}}" class="btn btn-info pull-left" role="button">Details</a>
+                <a href="/add-to-cart/{{this.product_id}}" class="btn btn-success pull-right" role="button">Add to cart</a>
             </div>
-            <h4></h4>
+
             {{!-- <p>{{this.product_s_desc}}</p> --}}
 
         </div>

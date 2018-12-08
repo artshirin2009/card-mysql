@@ -19,21 +19,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md-3">
+
+
+        {{#if categories}}
         <div class="categories_main">
-          <h3>Categories</h3>
-          <div class="list-group">
-            <a href="#" class="list-group-item">Cras justo odio</a>
-            <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-            <a href="#" class="list-group-item">Morbi leo risus</a>
-            <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-            <a href="#" class="list-group-item">Vestibulum at eros</a>
-            <a href="#" class="list-group-item">Cras justo odio</a>
-            <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-            <a href="#" class="list-group-item">Morbi leo risus</a>
-            <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-            <a href="#" class="list-group-item">Vestibulum at eros</a>
-          </div>
+          {{>categories}}
         </div>
+        {{/if}}
+
         <div class="news_main">
           <h3>News</h3>
           <div class="list-group">
@@ -60,9 +53,11 @@
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
+
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
 
+  <script src="/javascripts/custom.js" crossorigin="anonymous"></script>
 
 </body>
 

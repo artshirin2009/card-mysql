@@ -1,0 +1,12 @@
+{{#each cart}}
+<div class="media">
+    <div class="media-left"> <a href="#"> <img alt="{{this.item.title}}" class="media-object" data-src="{{this.item.imagePath}}"
+                src="{{this.item.imagePath}}" data-holder-rendered="true" style="width: 64px; height: 64px;"> </a>
+    </div>
+    <div class="media-body">
+        <h4 class="media-heading">{{this.item.title}}</h4>
+        <p>$ {{this.item.price}} x {{this.qty}}</p>
+        <p>{{this.description}}</p>
+    </div>
+</div>
+{{/each}}

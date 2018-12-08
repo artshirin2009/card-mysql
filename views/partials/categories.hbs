@@ -1,0 +1,16 @@
+<h3>Categories</h3>
+<div id='cssmenu'>
+    <ul>
+        {{#each category}}
+        <li class='has-sub'><a href='{{this.alias}}'>{{this.categoryTitle}}</a>
+            {{#if this.subCategory}}
+            <ul>
+                {{#each this.subCategory}}
+                <li><a href='/category-{{this.parentAlias}}/{{this.alias}}'>{{this.name}}</a></li>
+                {{/each}}
+            </ul>
+            {{/if}}
+        </li>
+        {{/each}}
+    </ul>
+</div>

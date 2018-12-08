@@ -14,19 +14,35 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Shopping
-                        cart</a></li>
+                <li>
+                    <a href="/cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Shopping
+                        cart</a>
+                    {{#if session.cart}}
+                    <span id="inCart">{{session.cart.totalQty}}</span>
+                    <span class="dropdown-content">
+                        {{>cart-top}}
+                    </span>
+                    {{/if}}
+                </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                        aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> User
-                        managment <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle user-name-area" data-toggle="dropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                        User
+                        {{#if user}}
+                        {{user.email}}
+                        {{else}}
+                        managment
+                        {{/if}}
+                        <span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        {{#if login}}
+                        <li><a href="/users/authorized">Authorized users</a></li>
+                        <li><a href="/users/logout">Logout</a></li>
+                        {{else}}
                         <li><a href="/users/signup">Sign Up (Registration)</a></li>
                         <li><a href="/users/login">Sign In (Login)</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li><a href="/users/authorized">Authorized users</a></li>
+                        {{/if}}
                     </ul>
                 </li>
             </ul>

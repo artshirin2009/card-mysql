@@ -1,0 +1,26 @@
+<div class="row">
+
+    <h1>{{product.product_name}}</h1>
+
+    <div class="media">
+        <div class="media-left">
+            <img class="" src="{{product.image}}" alt="{{product.product_name}}">
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">{{product.product_s_desc}}</h4>
+            <div class="price pull-left">
+                <p>Price - <strong>$ {{product.price}}</strong></p>
+                <div> <a href="/details/add-to-cart/{{product.product_id}}" class="btn btn-success" role="button">Add
+                        to
+                        cart</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr class="style2">
+    <div class="description">
+        {{{product.product_desc}}}
+    </div>
+
+</div>
